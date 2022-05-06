@@ -1,0 +1,25 @@
+{% extends 'blog/base.html'%}
+
+{% block content %}
+    <div>
+        <ul>
+        {% for post in post_list %}
+            <li class="border m-3 p-4 bg-dark" >
+                <a href="{% url 'details' post.slug %}">{{post.title}}</a>
+                <br>
+        <strong><small class="text-light">{{post.published_date}}
+        </small></strong>
+
+        </li>
+
+        
+        {% endfor %}
+        </ul>
+        
+    </div>
+     
+  
+  
+
+
+{% endblock %}
